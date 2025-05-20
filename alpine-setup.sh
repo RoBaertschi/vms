@@ -211,6 +211,8 @@ statusline.section_location = function()
 end
 EOF
 
+echo "Minimim Setup"
+apk add odin pkgconfig libdisplay-info-dev libdrm-dev eudev-dev
 
 echo "Setup openssh"
 setup-sshd -c openssh
