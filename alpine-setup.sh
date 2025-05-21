@@ -274,5 +274,6 @@ cp -r ~/* /mnt/root/home/robin
 cp -r ~/.config /mnt/root/home/robin/.config
 mkdir -p /mnt/root/home/robin/.local/state/
 cp -r ~/.local/state/nvim/* /mnt/root/home/robin/.local/state/nvim
+mkdir -p /mnt/root/home/robin/.ssh
 
 chown -R robin:robin /mnt/root/home/robin
