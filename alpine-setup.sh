@@ -87,11 +87,10 @@ add_plugin() {
 
 add_plugin nvim-lspconfig https://github.com/neovim/nvim-lspconfig
 add_plugin nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
-add_plugin mini.nvim https://github.com/echasnovaski/mini.nvim
-
+add_plugin mini.nvim https://github.com/echasnovski/mini.nvim
 mkdir -p $XDG_CONFIG_HOME/nvim
 
-cat >> $XDG_CONFIG_HOME <<EOF
+cat >> $XDG_CONFIG_HOME/nvim/init.lua <<EOF
 vim.cmd [[colorscheme retrobox]]
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -102,7 +101,7 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 vim.schedule(function()
->       vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.breakindent = true
@@ -127,9 +126,9 @@ vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\\\><C-n>")
 vim.keymap.set("i", "<a-space>", function()
->       vim.lsp.completion.get()
+    vim.lsp.completion.get()
 end)
 EOF
 
