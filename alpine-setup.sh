@@ -134,7 +134,7 @@ EOF
 
 for dir in $NV_RUNTIME_PATH; do
     cat >> $XDG_CONFIG_HOME/nvim/init.lua <<EOF
-    vim.opt.rtp:append(vim.fn.stdpath "state" .. "/$dir")
+vim.opt.rtp:append(vim.fn.stdpath "state" .. "/$dir")
 EOF
 done
 
@@ -154,7 +154,7 @@ add_apk_lsp lua-language-server lua_ls
 
 for lsp in $LSPS; do
     cat >> $XDG_CONFIG_HOME/nvim/init.lua <<EOF
-    vim.lsp.enable("$lsp")
+vim.lsp.enable("$lsp")
 EOF
 done
 
